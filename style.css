@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    display: flex;
+}
+.sidebar {
+    width: 220px;
+    background: #0f3d2e;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+}
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+.sidebar a:hover {
+    background: gold;
+    color: black;
+}
+.logo {
+    width: 80px;
+    display: block;
+    margin: auto;
+}
+.content {
+    margin-left: 240px;
+    padding: 30px;
+    width: 100%;
+}
+.welcome {
+    text-align: center;
+    color: #0f3d2e;
+}
+.slider {
+    text-align: center;
+    margin-top: 20px;
+}
+.slider img {
+    width: 600px;
+    height: 350px;
+    object-fit: cover;
+}
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+}
+button {
+    background: #0f3d2e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+}

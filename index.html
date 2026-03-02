@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Yayasan Al Basroh Insan Mandiri</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <img src="assets/indonesia.png" class="logo">
+    <h2>Al Basroh</h2>
+    <a href="#beranda">Beranda</a>
+    <a href="#tentang">Tentang Kami</a>
+    <a href="#artikel">Artikel</a>
+    <a href="#pendaftaran">Pendaftaran</a>
+    <a href="#agenda">Agenda</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#kontak">Kontak</a>
+    <a href="#faq">FAQ</a>
+</div>
+
+<div class="content">
+
+<section id="beranda">
+    <h1 class="welcome">Selamat Datang di Yayasan Al Basroh Insan Mandiri</h1>
+    <div class="slider">
+        <button onclick="prev()">❮</button>
+        <img id="slide" src="assets/kaabah1.jpg">
+        <button onclick="next()">❯</button>
+    </div>
+</section>
+
+<section id="pendaftaran">
+<h2>Formulir Pendaftaran</h2>
+<form action="#" onsubmit="return kirimForm()" method="POST">
+<input type="text" name="nama" placeholder="Nama Lengkap" required>
+<input type="text" name="tempat_lahir" placeholder="Tempat Lahir" required>
+<input type="date" name="tanggal_lahir" required>
+<select name="jenis_kelamin" required>
+<option value="">Jenis Kelamin</option>
+<option>Laki-laki</option>
+<option>Perempuan</option>
+</select>
+<textarea name="alamat" placeholder="Alamat Lengkap"></textarea>
+<input type="text" name="nama_ayah" placeholder="Nama Ayah">
+<input type="text" name="nama_ibu" placeholder="Nama Ibu">
+<input type="text" name="no_hp" placeholder="No HP">
+<input type="email" name="email" placeholder="Email">
+<input type="text" name="asal_sekolah" placeholder="Asal Sekolah">
+<input type="text" name="jurusan" placeholder="Jurusan">
+<button type="submit">Kirim Data</button>
+</form>
+</section>
+
+</div>
+
+<script>
+let index = 1;
+function next() {
+    index++;
+    if(index > 10) index = 1;
+    document.getElementById("slide").src = "assets/kaabah" + index + ".jpg";
+}
+function prev() {
+    index--;
+    if(index < 1) index = 10;
+    document.getElementById("slide").src = "assets/kaabah" + index + ".jpg";
+}
+
+function kirimForm(){
+    alert("Data berhasil dikirim (Mode Demo - GitHub Pages tidak mendukung PHP & Database).");
+    return false;
+}
+</script>
+
+
+</body>
+</html>
